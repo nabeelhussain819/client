@@ -25,12 +25,12 @@ import { AuthUser,AuthStudentTeacher } from "../../Api/SpecificData/AuthUser";
         <div class="row">
             <div class="col-lg-8 col-md-8 col-12 ms-auto">
                 <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-
-                    <h2 class="text-white ms-4 mb-0">More {api}</h2>
+                {api === "students"  ? null : <h2 class="text-white ms-4 mb-0">More {api}</h2>}
                 </div>
             </div>
 
             <div class="clearfix"></div>
+           
             {api === 'courses' && course.map((data) =>
                         data.courseId.map((index, i) => {
                           return (

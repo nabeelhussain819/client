@@ -74,8 +74,13 @@ function Sidebar() {
                 </Link>
               </li>
               <li>
+              <Link to="tec-qec">
+                  <i className="la la-area-chart mr-2 text-color-3"></i>QEC Results Of Teachers
+                </Link>
+              </li>
+              <li>
               <Link to="qec">
-                  <i className="la la-area-chart mr-2 text-color-3"></i>QEC results
+                  <i className="la la-area-chart mr-2 text-color-3"></i>QEC Results Of Students
                 </Link>
               </li>
               <li>

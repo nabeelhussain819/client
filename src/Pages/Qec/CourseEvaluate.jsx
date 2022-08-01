@@ -83,20 +83,17 @@ console.log(term)
       <Modal show={show} onHide={handleClose} keyboard={false} centered className="bg-trarnsparent">
    
       <div class="services-thumb services-thumb-up">
+      <button
+                     type="button"
+                     className="la la-close border-0 bg-transparent float-right"
+                     data-dismiss="modal"
+                     aria-label="Close"
+                     onClick={() => setShow(false)}
+                   ></button>
       {step ? <>
         <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
                
                <h3 class="mb-0">Select Teacher </h3>
-               <div class="services-price-wrap ms-auto">
-               <p class="services-price-text mb-0">   <button
-                     type="button"
-                     className="la la-close border-0 bg-transparent"
-                     data-dismiss="modal"
-                     aria-label="Close"
-                     onClick={() => setShow(false)}
-                   ></button></p>
-                   <div class="services-price-overlay"></div>
-               </div>
            </div> 
            <select
                     className="select-contain-select form-control"
@@ -139,16 +136,6 @@ console.log(term)
       </> : <>             <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
                
                <h3 class="mb-0">Select Course for {termV} Term</h3>
-               <div class="services-price-wrap ms-auto">
-               <p class="services-price-text mb-0">   <button
-                     type="button"
-                     className="la la-close border-0 bg-transparent"
-                     data-dismiss="modal"
-                     aria-label="Close"
-                     onClick={() => setShow(false)}
-                   ></button></p>
-                   <div class="services-price-overlay"></div>
-               </div>
            </div> 
              <select
                  className="select-contain-select form-control"
@@ -167,7 +154,7 @@ console.log(term)
                    );
                  })}
                </select>
-                                     <button onClick={Check} class="custom-btn custom-border-btn btn mt-3">Next</button></>}
+                                     <button onClick={Check} class="custom-btn  mt-3">Next</button></>}
  
 
                                     </div>

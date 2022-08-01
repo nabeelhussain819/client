@@ -18,7 +18,7 @@ const Details = () => {
   }
   return (
     <div>
-      <section class="hero3 d-flex justify-content-center align-items-center" id="section_1">
+      <section class="hero6 d-flex justify-content-center align-items-center" id="section_1">
                 <div class="container">
                     <div class="row">
                     {[from].map((data) => {
@@ -27,7 +27,7 @@ const Details = () => {
                         <div class="col-lg-7 col-12">
                             <div class="hero-text">
                                 <div class="hero-title-wrap d-flex align-items-center">
-                                    <h2 class="hero-title mb-0">Name - {data.name}</h2>
+                                    <h2 class="hero-title mb-0">{data.name}</h2>
                                 </div>
                                 {api == "teachers" && localStorage.getItem("id") && (
                             <Commend data={data} />
@@ -154,7 +154,8 @@ const Details = () => {
                     </div>
                    </section>
                   )}
-                  <ItemCarousel data={data} api={api}/>
+                  {localStorage.getItem('token') &&  <ItemCarousel data={data} api={api}/>}
+                 
                     </>
               )})}
                 </div>

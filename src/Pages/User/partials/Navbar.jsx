@@ -63,7 +63,7 @@ const Navbar = () => {
 
                           <Dropdown.Menu >
                           <Dropdown.Item >   <Link to="qec" className="pl-3">
-             Evaluation
+                          About Evaluation
               </Link></Dropdown.Item>
               <Dropdown.Item className="bg-success"> <CourseEvaluate/> </Dropdown.Item>
                           </Dropdown.Menu>

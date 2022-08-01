@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ReadCourse } from "../../../Api/Course";
-import StudentRatings from "./StudentRating";
 import { AuthTeacherStudents } from "../../../Api/SpecificData/AuthUser";
 
 const Students = () => {
@@ -56,11 +55,10 @@ const Students = () => {
                                         <Link
                                     to={"/details/" + index._id}
                                     class="custom-btn custom-border-btn btn mt-3"
-                                    state={{ from: index, api: "courses" }}
+                                    state={{ from: index, api: "students" }}
                                   >
                                   Discover More
                                   </Link>
-                                  <StudentRatings data={data} />
                                     </div>
                                 </div>
                           )}))}

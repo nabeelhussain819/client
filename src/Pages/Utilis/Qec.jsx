@@ -78,7 +78,7 @@ const Qec = () => {
       setScore(newScore);
       setValue([...value, isCorrect]);
     }
-    if (rating > 43) {
+    if (rating > 22) {
       alert("Fill Again You Are Changing Your Desicion Too Many Times");
       window.location.reload();
     }
@@ -106,7 +106,8 @@ const Qec = () => {
   return (
     <>
     <div className="top"></div>
-      <div className="dashboard-bread gradient-bg-gray section-pading">
+    <div className="container">
+    <div className="dashboard-bread " style={{    backgroundColor: "#fff"}}>
         <div className="container-fluid">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -128,6 +129,8 @@ const Qec = () => {
           </div>
         </div>
       </div>
+    </div>
+ 
       <div className="pb-0">
         <div className="container pt-4">
           <div className="col-lg-12 pt-4">

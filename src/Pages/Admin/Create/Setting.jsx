@@ -112,8 +112,7 @@ const Setting = () => {
                         <div class="form-box">
                         <div class="form-title-wrap">
                                 <h3 class="title pb-2">Change Semester Setting</h3>
-                                <p class="font-size-15 line-height-24">Enter the email of your account to reset password. Then you will receive a link to email
-                                    <br/> to reset the password.If you have any issue about reset password <a href="contact.html" class="color-text">contact us</a>
+                                <p class="font-size-15 line-height-24">This Setting is for change of semester if you agree with that student will get access to enroll in new semester 
                                 </p>
                             </div>
                             <div class="form-content">
@@ -150,8 +149,7 @@ const Setting = () => {
                         <div class="form-box">
                             <div class="form-title-wrap">
                                 <h3 class="title pb-2">Change Evaluation Setting</h3>
-                                <p class="font-size-15 line-height-24">Enter the email of your account to reset password. Then you will receive a link to email
-                                    <br/> to reset the password.If you have any issue about reset password <a href="contact.html" class="color-text">contact us</a>
+                                <p class="font-size-15 line-height-24">This Setting is for change of Evaluation Form if you agree with that student will get access to Evaluate in Course With respect to Term 
                                 </p>
                             </div>
                             <div class="form-content">
@@ -165,8 +163,8 @@ const Setting = () => {
                               onChange={(e)=>setEvaluatee(e.target.value)}
                             >
                               <option>----select-one----</option>
-                              <option value="true">I Agree!</option>
-                              <option value="false">I Dis Agree!</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No!</option>
                             </select>
                                             </div>
                                         </div>
@@ -196,8 +194,7 @@ const Setting = () => {
                         <div class="form-box">
                             <div class="form-title-wrap">
                                 <h3 class="title pb-2">Change Course Setting</h3>
-                                <p class="font-size-15 line-height-24">Enter the email of your account to reset password. Then you will receive a link to email
-                                    <br/> to reset the password.If you have any issue about reset password <a href="contact.html" class="color-text">contact us</a>
+                                <p class="font-size-15 line-height-24">This Setting is for change of Course if you agree with that student will get access to enroll in new Course 
                                 </p>
                             </div>
                             <div class="form-content">
@@ -211,8 +208,8 @@ const Setting = () => {
                               onChange={(e)=>setCourse(e.target.value)}
                             >
                               <option>----select-one----</option>
-                              <option value="true">I Agree!</option>
-                              <option value="false">I Dis Agree!</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No!</option>
                             </select>
                                             </div>
                                         </div>
