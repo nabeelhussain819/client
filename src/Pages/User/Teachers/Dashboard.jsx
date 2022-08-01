@@ -55,9 +55,10 @@ function Dashboard() {
   }, []);
   return (
     <>
-      <section className="dashboard-content-wrap ">
-        <div className="hero4">
-          <div className="container-fluid">
+     <div className="top">
+        </div>
+        <div className="container-fluid"></div>
+        <div className="container-fluid mb-4">
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="breadcrumb-content">
@@ -79,7 +80,7 @@ function Dashboard() {
             </div>
             <div className="row mt-4 ">
               <div className="col-lg-3 responsive-column-m ">
-                <div className="icon-box shadow-lg icon-layout-2 dashboard-icon-box">
+                <div className="icon-box  icon-layout-2 dashboard-icon-box">
                   <div className="d-flex">
                     <div className="info-icon icon-element flex-shrink-0">
                       <i className="la la-shopping-cart"></i>
@@ -167,7 +168,8 @@ function Dashboard() {
               </div>
             </div>
           </div>
-        </div>
+      <section className="dashboard-content-wrap " style={{marginTop:"50px"}}>
+       
         <div className="dashboard-main-content">
           <div className="container-fluid">
             <div className="row">

@@ -91,7 +91,9 @@ export default function ExtendedForm() {
   };
   console.log(studentId, teacherId);
   const registerCourse = async (courseId) => {
-    const res = await fetch("http://localhost:5000/add-course", {
+    var answer = window.confirm("Save data?");
+    if (answer) {
+      const res = await fetch("http://localhost:5000/add-course", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -109,6 +111,10 @@ export default function ExtendedForm() {
       toast.success("Course registered Successfully");
       setFullscreen(true);
     }
+    } else {
+      toast.info("Course not registered");
+    }
+   
   };
   
   const getData5 = () => {
@@ -149,8 +155,8 @@ export default function ExtendedForm() {
   }, []);
   return (
     <>
-    <section class="hero2" style={{paddingBottom:"2000px"}}  id="section_1">
-    <div class="container " style={{padding:"100px"}}>
+    <section class="hero6" style={{paddingBottom:"2000px"}}  id="section_1">
+    <div class="container mt-4" style={{padding:"100px"}}>
     <div class="col-lg-12">
                               <div class="services-thumb">
                                   <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">

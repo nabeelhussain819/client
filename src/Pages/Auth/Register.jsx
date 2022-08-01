@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import save from "../../Assets/save.png";
 import Input from "../../Components/UI/Forms/Input";
 import { doRegister } from "../../setup/service/Auth";
 
@@ -37,7 +36,7 @@ const Register = () => {
   const [show, setShow] = useState(false);
   const [next, setNext] = useState(false);
   const [all, setAll] = useState(true);
-  //   const filterDepart = depart.filter((data) => data.name.includes(search));
+
 
   const registerUser = async (e) => {
     const res = await doRegister(e);
@@ -120,7 +119,7 @@ const Register = () => {
                         
                       <h1>Email Has Been Sent!</h1>
                         <p>Verify Your Email To Continue.</p>
-                        <button onClick={() => setShow(false)} class="custom-btn btn-md">Close</button>
+                        <input onClick={() => setShow(false)} class="custom-btn btn-md" value="Close"/>
                       </div>
                         </>
                        

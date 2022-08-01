@@ -5,7 +5,7 @@ import logo1 from "../../Assets/logo.png";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useLocation } from "react-router-dom";
-import { Chart as ChartJS } from "chart.js/auto";
+import { FaListOl,FaQuestion } from "react-icons/fa";
 import { Line, Bar, Doughnut } from "react-chartjs-2";
 import { useEffect } from "react";
 import {AuthStudentRating} from '../../Api/SpecificData/AuthUser'
@@ -101,11 +101,11 @@ const Graph = () => {
             <div className="icon-box icon-layout-2 dashboard-icon-box">
               <div className="d-flex">
                 <div className="info-icon icon-element flex-shrink-0">
-                  <i className="la la-shopping-cart"></i>
+                  <i className="la la-percent"></i>
                 </div>
                 <div className="info-content">
                   <p className="info__desc">Average Result</p>
-                  <h4 className="info__title">{percent}%</h4>
+                  <h4 className="info__title">{percent > 100 ? "100" : percent}%</h4>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Graph = () => {
             <div className="icon-box icon-layout-2 dashboard-icon-box">
               <div className="d-flex">
                 <div className="info-icon icon-element bg-2 flex-shrink-0">
-                  <i className="la la-bookmark"></i>
+                  <FaListOl size={37} color="white"/>
                 </div>
                 <div className="info-content">
                   <p className="info__desc">Total Marks</p>
@@ -127,7 +127,7 @@ const Graph = () => {
             <div className="icon-box icon-layout-2 dashboard-icon-box">
               <div className="d-flex">
                 <div className="info-icon icon-element bg-3 flex-shrink-0">
-                  <i className="la la-plane"></i>
+                  <i className="la la-question"></i>
                 </div>
                 <div className="info-content">
                   <p className="info__desc">Status</p>
@@ -441,7 +441,7 @@ const Graph = () => {
                         <div className="col-lg-4">
                           <div className="sparkline-chart-item">
                             <span className="font-size-15">Average Of Marks</span>
-                            <h3 className="title font-size-16">{percent}%</h3>
+                            <h3 className="title font-size-16">{percent > 100 ? "100" : percent}%</h3>
                             <div className="visits-chart-2 mt-2"></div>
                           </div>
                         </div>

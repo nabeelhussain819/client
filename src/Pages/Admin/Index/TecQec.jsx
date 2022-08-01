@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Semester from "../Create/Semester";
-import { ReadQec } from "../../../Api/Qec";
+import { ReadTeacherQec } from "../../../Api/Qec";
 import { ReadTeacher } from "../../../Api/Teacher";
-const QEC = () => {
+const TecQEC = () => {
   const [show, setShow] = useState(false);
   const [dept, setDept] = useState([]);
   const [teacher, setTeacher] = useState([]);
@@ -11,12 +11,12 @@ const QEC = () => {
   function searchData(item) {
     setName(item);
   }
-  console.log(name)
+  console.log(dept)
   const filterData = dept.filter((data)=>data.term.includes(name)) 
   useEffect(() => {
     const getData = () => {
-      ReadQec().then(function (result) {
-        setDept(result);
+        ReadTeacherQec().then(function (result) {
+            setDept(result);
         ReadTeacher().then(function (result) {
           setTeacher(result);
         });
@@ -104,7 +104,7 @@ const QEC = () => {
                             <td>{data.teacherId.map((data)=>data.name)}</td>
                             <td>
                             <span className="badge badge-warning py-1 px-2">
-                              {data.rating < 15 ? "Not Good" :"Good"}
+                              {data.rating < 7 ? "Not Good" :"Good"}
                               </span>
                             </td>
                           </tr>
@@ -122,4 +122,4 @@ const QEC = () => {
   );
 };
 
-export default QEC;
+export default TecQEC;

@@ -76,18 +76,16 @@ function Login() {
       </Button>
 
       <Modal show={show} onHide={handleClose} keyboard={false} centered className="bg-trarnsparent">
-      <div class="col-lg-12 col-12"><div class="services-thumb">
-        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-          <h3 class="mb-0">Login</h3><div class="services-price-wrap ms-auto">
-            <p class="services-price-text mb-0">   <button
+      <div class="col-lg-12 col-12"><div class="services-thumb"><button
               type="button"
-              className="la la-close border-0 bg-transparent"
+              className="la la-close border-0 bg-transparent float-right"
               data-dismiss="modal"
               aria-label="Close"
               onClick={() => setShow(false)}
-            ></button></p>
-            <div class="services-price-overlay"></div>
-            </div></div><form
+            ></button>
+        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
+          <h3 class="mb-0">Login</h3> 
+            </div><form
                 method="post"
                 className="MultiFile-intercepted"
                 onSubmit={handleSubmit(loginUser)}
